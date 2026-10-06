@@ -1,0 +1,12 @@
+class ContactListPage{
+    constructor(page){
+        this.page=page;
+        this.addANewContactButton=page.getByRole('button', { name: 'Add a New Contact' });
+    }
+
+    async clickAddANewContactButton(){
+        await this.addANewContactButton.click();
+    }
+
+} 
+module.exports= {ContactListPage};

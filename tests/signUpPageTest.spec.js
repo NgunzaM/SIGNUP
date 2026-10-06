@@ -2,7 +2,9 @@ import {test , expect} from '@playwright/test';
 import { SignUpPage } from '../pages/signUpPage';
 import {testData} from '../data/testData';
 
-test('Sign Up Page Test', async ({ page }) => {
+test.describe('Sign Up Page Tests', () => {
+
+test('SuccessfulSign Up Page Test', async ({ page }) => {
   const signUpPage = new SignUpPage(page);
   await signUpPage.goto();
   await signUpPage.clickSignUpButton();
@@ -15,3 +17,5 @@ test('Sign Up Page Test', async ({ page }) => {
   );
   await signUpPage.submitForm();
 });
+});
+

@@ -1,4 +1,4 @@
-export class SignUpPage {
+class SignUpPage {
   
   constructor(page) {
     this.page = page;
@@ -31,3 +31,4 @@ async fillForm(firstName, lastName, email, password) {
   }
 
 }
+module.exports = { SignUpPage };

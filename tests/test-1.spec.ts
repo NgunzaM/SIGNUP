@@ -15,3 +15,13 @@ test('test', async ({ page }) => {
   await expect(page.getByRole('heading')).toContainText('Add User');
   await page.getByRole('button', { name: 'Submit' }).click();
 });
+
+
+await page.goto('https://thinking-tester-contact-list.herokuapp.com/');
+await page.getByRole('textbox', { name: 'Email' }).click();
+await page.getByRole('textbox', { name: 'Email' }).fill('test@testing.com');
+await page.getByRole('textbox', { name: 'Password' }).click();
+await page.getByRole('textbox', { name: 'Password' }).fill('tesing');
+await page.getByRole('button', { name: 'Submit' }).click();
+await expect(page.locator('#error')).toContainText('Incorrect username or password');
+
