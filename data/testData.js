@@ -1,8 +1,8 @@
 export const testData = {
   validUser: {
-    firstName: 'testuser',
-    lastName: 'testuserlastName',
-    email: 'testuser@example.com',
+    firstName: 'testuser1',
+    lastName: 'testuserlastName1',
+    email: 'testuser@example1.com',
     password: 'testpassword',
 
 
